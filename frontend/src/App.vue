@@ -1,9 +1,7 @@
 <template>
   <img align=center alt="Vue logo" src="./assets/logo.png">
   <div class="three">
-  <HomeView />
   <TodosView />
-  <AboutView />
   </div>
 </template>
 
