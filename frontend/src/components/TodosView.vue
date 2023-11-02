@@ -1,32 +1,34 @@
 <template>
 <div>
-<div v-for="item in state.todos" :key="item.receiver">
-	<h4>{{item.receiver}}</h4>
-	<p>{{item.country}}</p>
-	<p>{{item.year}}</p>
+<div v-for="todo in todos" :key="todo.receiver" :todoProps="todo">
+	<h4>{{todoProps.receiver}}</h4>
+	<p>{{todoProps.country}}</p>
+	<p>{{todoProps.year}}</p>
 </div>
 </div>
 </template>
 
 <script>
-import { reactive, onMounted } from "vue";
+import axios from "axios";
+import { ref } from "vue";
 export default {
   name: 'TodosView',
+  props: ['todoProps'],
 	setup() {
-		const state = reactive({
-			todos: {}
-		})	
-		function GetAll() {
-			fetch("http://localhost:3000/todos")
-			.then( res => res.json())
-			.then( data => {
-				state.todos = data
-			})
-		}
-		onMounted (() => {
-			GetAll()
-		})
-		return { state, GetAll }
+		const todos = ref([])
+		const getAll = async () => {
+      try {
+        const res = await axios.get(
+          'http://localhost:3000/todos'
+        )
+         console.log(res.data)
+        todos.value = res.data
+      } catch (error) {
+        console.log(error)
+      }
+    }
+		getAll()
+		return { todos }
 	}
 
 }
