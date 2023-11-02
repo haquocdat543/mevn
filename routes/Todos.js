@@ -28,11 +28,12 @@ router.delete('/delete/:id', async (req, res) => {
 })
 
 router.put('/update/:id', async (req, res) => {
-	const todoUpdateById = await Todo.findOne( {
+	const todoUpdateById = await Todo.updateOne( {
 	receiver: "Leo Esaki",
-	country: "Japan"
-});
-	res.json(todoUpdateById);
+	country: "Japan",
+	year: 1949
+})
+	res.json(todoUpdateById)
 })
 
 module.exports = router
