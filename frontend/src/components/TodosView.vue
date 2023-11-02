@@ -13,18 +13,18 @@ import { reactive } from "vue";
 export default {
   name: 'TodosView',
 	setup() {
-		const test = reactive({
-			name: "SlideShow"
+		const state = reactive({
+			todos: "SlideShow"
 		})	
 		function GetAll() {
-			fetch("http://localhost:3000")
-			.then( res => res.json());
+			fetch("http://localhost:3000/todos")
+			.then( res => res.json())
 			.then( data => {
 				state.todos = data
 			})
 		}
 		GetAll()
-		return { test, GetAll }
+		return { state, GetAll }
 	}
 
 }
