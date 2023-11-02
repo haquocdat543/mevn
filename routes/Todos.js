@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 router.post('/new', async (req, res) => {
 	const newTodo = new Todo(
 	{
-		author: "Shuji Nakamura",
+		receiver: "Shuji Nakamura",
 		contry: "Japan"
 	});
 	const savedTodo = await newTodo.save()
@@ -29,7 +29,7 @@ router.delete('/delete/:id', async (req, res) => {
 
 router.put('/update/:id', async (req, res) => {
 	const todoUpdateById = await Todo.findOne( {
-	author: "Leo Esaki",
+	receiver: "Leo Esaki",
 	country: "Japan"
 });
 	res.json(todoUpdateById);
