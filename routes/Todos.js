@@ -18,12 +18,12 @@ router.post('/new', async (req, res) => {
 })
 
 router.get('/get/:id', async (req, res) => {
-	const todoId = await Todo.findbyId( req.params.id );
+	const todoId = await Todo.findById( req.params.id );
 	res.json(todoId);
 })
 
 router.delete('/delete/:id', async (req, res) => {
-	const todoDeleteById = await Todo.findbyIdAndDelete( req.params.id );
+	const todoDeleteById = await Todo.findByIdAndDelete( req.params.id );
 	res.json(todoDeleteById);
 })
 
