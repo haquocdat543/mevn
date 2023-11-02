@@ -1,5 +1,4 @@
 <template>
-  <img align=center alt="Vue logo" src="./assets/logo.png">
   <div class="three">
   <TodosView />
   </div>
@@ -28,16 +27,5 @@ export default {
 --input-color: #0d1117;
 --border-color: #30363d;
 --blue-text--color: #58a6ff;
-}
-.three { 
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: var(--first-color);
-color: white;
-height: 60px;
-padding: 2px 28px;
-position: sticky;
-top: 0;
 }
 </style>

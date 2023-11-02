@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { reactive } from "vue";
+import { reactive, onMounted } from "vue";
 export default {
   name: 'TodosView',
 	setup() {
@@ -23,7 +23,9 @@ export default {
 				state.todos = data
 			})
 		}
-		GetAll()
+		onMounted (() => {
+			GetAll()
+		})
 		return { state, GetAll }
 	}
 
