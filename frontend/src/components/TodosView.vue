@@ -14,7 +14,7 @@ export default {
   name: 'TodosView',
 	setup() {
 		const state = reactive({
-			todos: "SlideShow"
+			todos: {}
 		})	
 		function GetAll() {
 			fetch("http://localhost:3000/todos")
