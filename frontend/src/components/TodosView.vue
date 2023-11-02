@@ -1,8 +1,9 @@
 <template>
 <div>
-<div>
-	<h4></h4>
-	<p></p>
+<div v-for="item in state.todos" :key="item.receiver">
+	<h4>{{item.receiver}}</h4>
+	<p>{{item.country}}</p>
+	<p>{{item.year}}</p>
 </div>
 </div>
 </template>
