@@ -7,7 +7,7 @@
 
 <script>
 import HomeView from './components/HomeView.vue'
-import TodosView './components/TodosView.vue'
+import TodosView from './components/TodosView.vue'
 import AboutView from './components/HelloWorld.vue'
 
 export default {
