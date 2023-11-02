@@ -6,16 +6,12 @@
 </template>
 
 <script>
-import HomeView from './components/HomeView.vue'
 import TodosView from './components/TodosView.vue'
-import AboutView from './components/AboutView.vue'
 
 export default {
   name: 'App',
   components: {
-    HomeView,
-    TodosView,
-    AboutView
+    TodosView
   }
 }
 </script>
