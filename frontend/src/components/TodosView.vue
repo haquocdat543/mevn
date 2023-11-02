@@ -1,8 +1,9 @@
 <template>
 <div>
-<p>
-{{test.name}}
-</p>
+<div>
+	<h4></h4>
+	<p></p>
+</div>
 </div>
 </template>
 
@@ -14,7 +15,15 @@ export default {
 		const test = reactive({
 			name: "SlideShow"
 		})	
-		return { test }
+		function GetAll() {
+			fetch("http://localhost:3000")
+			.then( res => res.json());
+			.then( data => {
+				state.todos = data
+			})
+		}
+		GetAll()
+		return { test, GetAll }
 	}
 
 }
