@@ -29,9 +29,9 @@ router.delete('/delete/:id', async (req, res) => {
 
 router.put('/update/:id', async (req, res) => {
 	const todoUpdateById = await Todo.updateOne( {
-	receiver: "Leo Esaki",
+	receiver: "Sin Itiro Tomonaga",
 	country: "Japan",
-	year: 1949
+	year: 1965
 })
 	res.json(todoUpdateById)
 })
