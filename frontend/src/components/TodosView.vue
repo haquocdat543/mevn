@@ -1,12 +1,22 @@
 <template>
 <div>
-	<h2>Todos</h2>
+<p>
+{{test.name}}
+</p>
 </div>
 </template>
 
 <script>
+import { reactive } from "vue";
 export default {
   name: 'TodosView',
+	setup() {
+		const test = reactive({
+			name: "SlideShow"
+		})	
+		return { test }
+	}
+
 }
 </script>
 
