@@ -1,16 +1,16 @@
 <template>
   <div class="three">
-  <TodosView />
+  <PostsService/>
   </div>
 </template>
 
 <script>
-import TodosView from './components/TodosView.vue'
+import PostsService from './components/Posts.vue'
 
 export default {
   name: 'App',
   components: {
-    TodosView
+  PostsService
   }
 }
 </script>
