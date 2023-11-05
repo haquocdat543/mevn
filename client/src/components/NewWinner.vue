@@ -6,9 +6,11 @@
           <input type="text" name="title" placeholder="RECEIVER" v-model="receiver">
         </div>
         <div>
-          <textarea rows="15" cols="15" placeholder="COUNTRY" v-model="country"></textarea>
-          <textarea rows="15" cols="15" placeholder="YEAR" v-model="year"></textarea>
+          <input type="text" name="title" placeholder="COUNTRY" v-model="country">
         </div>
+	<div>
+          <input type="number" name="title" placeholder="YEAR" v-model="year">
+	</div>
         <div>
           <button class="app_post_btn" @click="addWinners">Add</button>
         </div>
