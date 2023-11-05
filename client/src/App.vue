@@ -1,7 +1,6 @@
 <template>
-  <router-link to="/winners/new">Login</router-link>
   <div>
-  <router-view></router-view>
+  <router-view/>
   </div>
   <NobelPrizeWinners />
 </template>

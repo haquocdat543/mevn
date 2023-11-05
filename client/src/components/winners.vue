@@ -25,7 +25,7 @@
     </div>
     <div v-else>
       There are no winner .. Lets add one now <br /><br />
-      <router-link to="/winners/new" class="add_post_link">Add Winner</router-link>
+      <router-link :to="{ name: 'NewWinner' }" class="add_post_link">Add Winner</router-link>
     </div>
   </div>
 </template>
