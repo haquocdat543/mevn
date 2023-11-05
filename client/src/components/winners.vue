@@ -2,7 +2,7 @@
   <div class="posts">
     <h1>Posts</h1>
     <div v-if=" winners && winners.length > 0" class="table-wrap">
-      <div>
+      <div class="router">
         <router-link  :to="{ name: 'NewWinner' }" class="">Add</router-link>
       </div>
       <table>

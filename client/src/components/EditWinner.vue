@@ -3,12 +3,14 @@
     <h1>Edit Post</h1>
       <div class="form">
         <div>
-          <input type="text" name="receiver" placeholder="RECEIVER" v-model="receiver">
+          <input type="text" name="title" placeholder="RECEIVER" v-model="receiver">
         </div>
         <div>
-          <textarea rows="15" cols="15" placeholder="COUNTRY" v-model="country"></textarea>
-          <textarea rows="15" cols="15" placeholder="YEAR" v-model="year"></textarea>
+          <input type="text" name="title" placeholder="COUNTRY" v-model="country">
         </div>
+	<div>
+          <input type="number" name="title" placeholder="YEAR" v-model="year">
+	</div>
         <div>
           <button class="app_post_btn" @click="updateWinners()">Update</button>
         </div>
