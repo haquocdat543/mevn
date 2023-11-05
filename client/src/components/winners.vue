@@ -7,8 +7,9 @@
       </div>
       <table>
         <tr>
-          <td>Title</td>
-          <td width="550">Description</td>
+          <td>Receiver</td>
+          <td>Country</td>
+          <td>Year</td>
           <td width="100" align="center">Action</td>
         </tr>
         <tr v-for="winner in winners" :key="winner._id">
