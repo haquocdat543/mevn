@@ -8,12 +8,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/new', async (req, res) => {
-	const newWinner = new Winner(
-	{
-		receiver: "Shuji Nakamura",
-		country: "Japan",
-		year: 2014
-	});
+	const newWinner = new Winner(req.body);
 	const savedWinner = await newWinner.save()
 	res.json(savedWinner)
 })

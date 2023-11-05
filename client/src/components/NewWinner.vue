@@ -20,6 +20,7 @@
 
 <script>
 import NobelPrizeWinners from '@/services/winners.js'
+// import winnersVue from '@/components/winners.vue'
 export default {
   name: 'NewWinner',
   data () {
@@ -37,7 +38,8 @@ export default {
         year: this.year
       })
       this.$router.push({ name: 'winners' })
-    }
+//      winnersVue.fetchWinners()
+    },
   }
 }
 </script>
